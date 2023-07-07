@@ -23,7 +23,6 @@ export class ProductsController {
   @Post('upload')
   @UseInterceptors(FileInterceptor('file'))
   async uploadCSVFile(@UploadedFile() file: Express.Multer.File) {
-    
     // Parse CSV file
     const csvData: any[] = await new Promise((resolve, reject) => {
       const parser = parse({ delimiter: ',' });

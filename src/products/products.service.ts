@@ -23,7 +23,9 @@ export class ProductsService {
       return product;
     });
 
-    return await this.productsRepository.save(products);
+    await this.productsRepository.save(products);
+
+    return products;
   }
 
   async create(createProductDto: CreateProductDto) {
