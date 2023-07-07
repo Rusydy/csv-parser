@@ -1,0 +1,1 @@
+{"level":"info","message":"Created 30 products"}
